@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- CSS :active style sheets -->
+{% include head.html %}
+  
+<body ontouchstart="" style="display: flex; width: 100%;">
+
+    <!-- Left sidebar flex -->
+    <div style="flex-basis: 30%;">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/archive">Archive</a></li>
+        </ul>
+    </div>
+
+    <!-- Right side contents -->
+    <div style="flex-basis: 70%;">
+        {% include nav.html %}
+        {% include search.html %}
+
+        {{ content }}
+
+        {% include footer.html %}
+    </div>
+</body>
+
+</html>
